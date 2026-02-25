@@ -1,0 +1,209 @@
+.container {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.212);
+    border: 1px solid rgba(255, 255, 255, 0.233);
+    backdrop-filter: blur(10px);
+}
+.section_heading {
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.nav_bar {
+    font-weight: 650;
+    font-size: clamp(20px, 5vw, 2.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+}
+.weather-container .left_coloum,
+.weather-container .right_coloum {
+    width: 100%;
+}
+
+/* Search Bar */
+.search_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.search_bar input {
+    width: 80%;
+    background: rgba(0, 0, 0, 0.212);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+.search_bar button{
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.11);
+    border: 1px solid rgba(255, 255, 255, 0.233);
+    color: white;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+.search_bar button img {
+    width: 60%;
+    height: 60%;
+}
+
+/* currentWeather Component */
+.currentWeather {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.currentWeather_section_1 .current_city {
+    font-size: 20px;
+    font-weight: 650;
+    text-align: center;
+}
+.currentWeather_section_1 .live {
+    width: max-content;
+    background: rgba(255, 255, 255, 0.158);
+    margin: auto;
+    padding: 0px 15px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.281);
+}
+.currentWeather_section_2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.currentWeather_section_2 img {
+    width: 60%;
+    height: 50%;
+    padding: 30px 0;
+}
+.currentWeather_section_3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.currentWeather_section_3 .curr_temp_in_deg {
+    font-size: 70px;
+    font-weight: 760;
+}
+.currentWeather_section_3 .curr_temp_in_text {
+    font-size: 15px;
+    font-weight: 760;
+    margin-top: -20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.479);
+}
+
+/* HourlyForecast */
+.hourly_forecast {
+    overflow: hidden;
+}
+.hour_forecast_grid {
+    width: 100%;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    overflow-x: scroll; 
+}
+.hour_forecast_card {
+    width: 125px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.041);
+    border: 1px solid rgba(255, 255, 255, 0.233);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+::-webkit-scrollbar{
+    height: 12px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.219);
+    border-radius: 50px;
+}
+
+/* Air Condition Component */
+.airCondtionCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.air-card {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.041);
+    border: 1px solid rgba(255, 255, 255, 0.233);
+}
+
+/* Weekly Forecast */
+.weekly_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.weekly_card {
+    background: rgba(255, 255, 255, 0.041);
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.233);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .weather-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    .weather-container .left_coloum{
+        width: 65%;
+    }
+    .search_bar input {
+        width: 95%;
+    }
+    .weather-container .right_coloum {
+        width: 35%;
+    }
+    .currentWeather {
+        height: 480px;
+    }
+    .currentWeather_section_2 img {
+        width: 30%;
+        height: 100%;
+        padding: 30px 0;
+    }
+}

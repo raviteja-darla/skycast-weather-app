@@ -1,0 +1,23 @@
+.app-wrapper {
+    max-width: 405px;
+    margin: auto;
+    padding: 12px;
+}
+
+@media (min-width: 768px) {
+    .app-wrapper {
+        max-width: 768px;
+        margin: auto;
+        padding: 12px;
+    }
+}
+@media (min-width: 1024px) {
+    .app-wrapper {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 2000px) {
+    .app-wrapper {
+        max-width: 2000px;
+    }
+}
